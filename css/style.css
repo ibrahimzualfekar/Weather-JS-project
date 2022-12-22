@@ -3,6 +3,7 @@ body {
     font-family: century-gothic, sans-serif;
     font-weight: 400;
     font-style: normal;
+    box-sizing: border-box;
 }
 
 
@@ -32,7 +33,6 @@ input:focus-visible {outline: none;}
 
 .bg-color
 {
-    height: 100%;
     background-color: rgba(49, 153, 171, 0.575);
 }
 
@@ -40,6 +40,7 @@ input:focus-visible {outline: none;}
 
     background-image: url(../images/france.svg);
     background-size: cover;
+    background-position: center;
 }
 .display-temp .search {width: 42%;}
 
@@ -50,7 +51,7 @@ input:focus-visible {outline: none;}
 }
 
 .display-temp .temp-card {
-    width: 32%;
+
     border-radius: 8px;
 }
 
@@ -107,23 +108,7 @@ input:focus-visible {outline: none;}
     text-shadow: 0 0 1px #455a64,  0 0 1px #455a64;
 }
 /* Small to Medium Screen */
-@media (max-width: 991px) 
-{
- 
 
-    /* Display Temp */
-    .display-temp .city-temp {display: block !important;}
-
-    .display-temp #search-bar {margin-bottom: 10px !important;}
-
-    .display-temp .search,
-    .display-temp .temp-card {
-        width: 100%;
-        margin: 20px 0 !important;
-    }
-
-    
-}
 /********* End Display Temp *********/ 
 
 
@@ -145,5 +130,9 @@ footer i {
 footer i:hover {color: #37aec3;}
 /********* End Footer *********/ 
 
-
+@media (min-width:992px){
+    .display-temp{
+        height: calc(100vh - 96.78px);
+    }
+}
 
